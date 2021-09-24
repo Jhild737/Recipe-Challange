@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   width="210"
+   height="60"
+   version="1.0"
+   sodipodi:docbase="C:\Documents and Settings\Administrator\Desktop"
+   sodipodi:docname="Plus_Minus_Hyphen-minus.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs5" />
+  <sodipodi:namedview
+     inkscape:window-height="719"
+     inkscape:window-width="1024"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     width="210px"
+     height="60px"
+     inkscape:zoom="1.476"
+     inkscape:cx="268.79463"
+     inkscape:cy="25"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:current-layer="svg2" />
+  <path
+     style="font-size:72px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:DejaVu Sans"
+     d="M 40.569761,8.4366112 L 40.569761,28.018642 L 60.151793,28.018642 L 60.151793,33.995205 L 40.569761,33.995205 L 40.569761,53.577236 L 34.663511,53.577236 L 34.663511,33.995205 L 15.08148,33.995205 L 15.08148,28.018642 L 34.663511,28.018642 L 34.663511,8.4366112 L 40.569761,8.4366112 z M 98.33148,28.018642 L 143.40179,28.018642 L 143.40179,33.995205 L 98.33148,33.995205 L 98.33148,28.018642 z M 177.4682,30.971767 L 196.41742,30.971767 L 196.41742,36.737392 L 177.4682,36.737392 L 177.4682,30.971767 z "
+     id="text2158" />
+</svg>
