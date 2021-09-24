@@ -1,9 +1,52 @@
 .card-template {
-    max-width: 20%;
-    max-height: 25%;
+    max-width: 15%;
+    max-height: 50%;
+  }
+  .mat-card-header{
+   max-height: max-content;
+    text-align: center;
+  }
+
+  .card-deck-container {
+    width: 100%;
+    max-width: 80%;
+    position: fixed;
+    border-radius: 2px;
+    padding: 10px 10px 30px;
+    margin: 5% 5%;
+    background-color: #424242;
   }
   
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+  .card-item {
+    padding: 3px 3px 3px 3px;
+  }
+
+.mat-card-title{
+   align-self: center;
+  text-align: center;
+}
+
+  .mat-grid-list{
+    margin-left: 1%;
+    max-width: 150px;
+    display: flex;
+    box-shadow: inset;
+  }
+
+  .mat-icon{
+    display: inline-block;
+    
+  }
+
+  #read-more{
+    width: 100px;
+  }
+
+  .button{
+    width: 100px;
+    display: inline-block;
+    max-height: 20px;
+    max-width: 100px;
+  
+    
   }

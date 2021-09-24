@@ -1,10 +1,10 @@
 import { Component, ViewChild, Input, ElementRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
 import { MyCard } from './my-card';
 import {CardFunctions} from './cardFunctions';
 
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatCard } from '@angular/material/card';
 
 
 
@@ -17,18 +17,29 @@ import {CardFunctions} from './cardFunctions';
 
 
 export class CardComponent{
+  constructor() {  }
   @Input() c!: MyCard;
   @ViewChild('cardtemplate') form!: ElementRef;
-  cardController: CardFunctions = new CardFunctions;
+  
+  public cards: MyCard[] = [{ name: 'pep', description: 'cool', picURL: 'looking'}, { name: 'pep', description: 'cool', picURL: 'looking'}];
+  public cardController: CardFunctions = new CardFunctions(this.cards);
 
-  public currentCard: MyCard = { name: 'pep', description: 'cool', picURL: 'looking'};
-  public index: number = 0;
-  constructor() {         
-      
+  public index: number = CardFunctions.length - 1;
+ 
+  @Input() cardT=  this.cards[this.index];
+  
+  public currentRender(ca: MyCard){
+      this.cardT = ca;
+  }
+
+   public clickSearch(){
+
+   }
+  
+   public clickAdd(){
+
    }
 
-  
-  
   public recipeTitle(c: MyCard): string{
       
       return c.name;

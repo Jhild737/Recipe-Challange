@@ -3,9 +3,12 @@ import { MyCard } from './my-card';
 
 
 export class CardFunctions{
- constructor (){}
+  public cardList: Array<MyCard> = [];
+  constructor (list: Array<MyCard>){
+    this.cardList = list;
+ }
 
- public cardList: Array<MyCard> = [];
+ 
 
  public addCard(ca: MyCard){
    this.cardList.push(ca);

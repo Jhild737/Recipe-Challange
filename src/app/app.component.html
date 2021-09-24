@@ -141,7 +141,15 @@
 
 
 <div class="content" role="main">
-  <card-component></card-component>
+  
+  
+  <div fxLayout="row" class="card-deck-container mat-elevation-z4">
+    <div fxFlex *ngFor="let card of cards" class="card-item">
+      {{currentCards(card)}}
+      <card-component [ngStyle]="{'width':'300' + 'px'}" [cardT]="card"></card-component>
+    </div>
+</div>
+  
   
   <!--<div class="card-container" *ngIf="">
   <mat-grid-list cols="2" rowHeight="2:1">
