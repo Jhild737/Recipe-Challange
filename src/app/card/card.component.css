@@ -1,5 +1,6 @@
-.example-card {
-    max-width: 400px;
+.card-template {
+    max-width: 20%;
+    max-height: 25%;
   }
   
   .example-header-image {

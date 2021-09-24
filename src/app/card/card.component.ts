@@ -1,21 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, Input, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
-class myCard{
-  constructor(public name: string, public imageURL: string, public description: string) {}
-}
+import { MyCard } from './my-card';
+import {CardFunctions} from './cardFunctions';
+
+
+
 
 
 @Component({
-  selector: 'app-card',
+  selector: 'card-component',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
   
 })
-export class CardComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+export class CardComponent{
+  @Input() c!: MyCard;
+  @ViewChild('cardtemplate') form!: ElementRef;
+  cardController: CardFunctions = new CardFunctions;
+
+  public currentCard: MyCard = { name: 'pep', description: 'cool', picURL: 'looking'};
+  public index: number = 0;
+  constructor() {         
+      
+   }
+
+  
+  
+  public recipeTitle(c: MyCard): string{
+      
+      return c.name;
   }
-
+  
 }
