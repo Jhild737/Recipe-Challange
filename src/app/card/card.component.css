@@ -7,24 +7,11 @@
     text-align: center;
   }
 
-  .card-deck-container {
-    width: 100%;
-    max-width: 80%;
-    position: fixed;
-    border-radius: 2px;
-    padding: 10px 10px 30px;
-    margin: 5% 5%;
-    background-color: #424242;
-  }
-  
-  .card-item {
-    padding: 3px 3px 3px 3px;
-  }
 
-.mat-card-title{
-   align-self: center;
-  text-align: center;
-}
+  
+
+
+
 
   .mat-grid-list{
     margin-left: 1%;

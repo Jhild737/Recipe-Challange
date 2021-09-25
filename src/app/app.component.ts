@@ -1,6 +1,8 @@
-import { Attribute, Component } from '@angular/core';
+import { Attribute, Component, OnInit } from '@angular/core';
 import { CardComponent } from './card/card.component';
 import { MyCard } from './card/my-card';
+import {PageEvent} from '@angular/material/paginator';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,26 +14,36 @@ import { MyCard } from './card/my-card';
 
 
 
-export class AppComponent {
-  
-  
- public shown = false;
-public cardHolder: CardComponent = new CardComponent();
+export class AppComponent implements OnInit{
+
+
 public cards: MyCard[] = this.cardHolder.cards;
+public currentCard?: MyCard = this.cards[0];
 public count: number = 0;
-  title = 'recipe';
+pageSizeOptions: number[] = [5, 10, 25, 100];
+constructor(private cardHolder: CardComponent = new CardComponent()){
+  if (!this.currentCard){
+    this.currentCard = { name: '', description: '', picURL: ''}
+  }
+}
   
-  public checkForNewCards(){
+  public updateData(){
     if (this.cardHolder.cards.length > (this.count + 1)){
+      alert( this.count);
       this.count = this.cardHolder.cards.length;
       this.cards = this.cardHolder.cards;
     }
   }
 
-  public currentCards(card: MyCard){
-    this.cardHolder.currentRender(card);
+  ngOnInit() {
+    this.resetCards();
+    this.count = 0;
   }
 
+  public resetCards(){
+    this.cardHolder = new CardComponent();
+    this.count = 0;
+  }
 
   public clickPlus(){
     alert('Card pops up with form to submit some info');    
@@ -39,7 +51,7 @@ public count: number = 0;
 
    public clickSearch(){
     alert('search page pops out from side');
-    this.shown = true
+   
    }
 
   }  

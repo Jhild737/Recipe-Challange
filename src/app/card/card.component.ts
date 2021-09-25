@@ -18,10 +18,10 @@ import { MatCard } from '@angular/material/card';
 
 export class CardComponent{
   constructor() {  }
-  @Input() c!: MyCard;
+ @Input() c!: MyCard;
   @ViewChild('cardtemplate') form!: ElementRef;
   
-  public cards: MyCard[] = [{ name: 'pep', description: 'cool', picURL: 'looking'}, { name: 'pep', description: 'cool', picURL: 'looking'}];
+ public cards: MyCard[] = [{ name: 'pep', description: 'cool', picURL: 'looking'}, { name: 'pepuyuy', description: 'cool', picURL: 'looking'}];
   public cardController: CardFunctions = new CardFunctions(this.cards);
 
   public index: number = CardFunctions.length - 1;
@@ -32,12 +32,14 @@ export class CardComponent{
       this.cardT = ca;
   }
 
+  
    public clickSearch(){
 
    }
   
-   public clickAdd(){
-
+   public clickAdd(ca: MyCard){
+     
+      alert(ca.name);
    }
 
   public recipeTitle(c: MyCard): string{
