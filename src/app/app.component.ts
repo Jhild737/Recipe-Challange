@@ -19,13 +19,13 @@ export class AppComponent implements AfterViewInit{
 constructor(private cardHolder: CardComponent){
   
 }
-public pageEvent: PageEvent = new PageEvent();
+public pageEvent: PageEvent = new PageEvent(); //one possible way to pass event data.
 public cardCount: number = 0;
 public currentCard: MyCard = this.cardHolder.blankCard[0];
-public pgIndex = 0;
-public unchanged: boolean = true;
-public dataSource = new MatTableDataSource<MyCard>(this.cardHolder.getCards());
-  
+public pgIndex = 0; //track the current opened card
+public unchanged: boolean = true; //need to stop duplicates from being posted
+public dataSource = new MatTableDataSource<MyCard>(this.cardHolder.getCards()); 
+  //Update local card data from cardHolder. Data should be processed in CardComponent class.
    public updateData(){
     
      if (!pa){return pa} else {
@@ -41,11 +41,11 @@ public dataSource = new MatTableDataSource<MyCard>(this.cardHolder.getCards());
 
   
 
- 
+  //Event: add new recipe symbol clicked. Need to add view change to this.
   public clickPlus(){
     alert('Card pops up with form to submit some info');    
    }
-
+  //Todo: make list + search function to search for which meal the recipe belongs to. Add meal as an attribute for My card.
    public clickSearch(){
     alert('search page pops out from side');
    
