@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-add-card',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class AddCardComponent implements OnInit {
 
   constructor() { }
-
+  public name = 'jay';
   ngOnInit(): void {
   }
 
+  public setValue(){}
 }

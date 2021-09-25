@@ -15,7 +15,10 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 
 
 
-export class AppComponent implements AfterViewInit{
+export class AppComponent{
+
+
+
 constructor(private cardHolder: CardComponent){
   
 }
@@ -24,22 +27,15 @@ public cardCount: number = 0;
 public currentCard: MyCard = this.cardHolder.blankCard[0];
 public pgIndex = 0;
 public unchanged: boolean = true;
-public dataSource = new MatTableDataSource<MyCard>(this.cardHolder.getCards());
-  
-   public updateData(){
-    
-     if (!pa){return pa} else {
-    if (this.cardHolder.cards.length > (this.cardCount + 1)){
-      alert( this.cardCount);
-      this.cardCount = this.cardHolder.getCount();
-      this.currentCard = this.cardHolder.cardT;
-      this.unchanged = false;
-    }
-  }    
-  return pa;
-  }
+public cards = this.cardHolder.getCards();
 
   
+   public updateData(){     
+      this.cards = this.cardHolder.getCards();     
+      this.cardCount = this.cardHolder.count;
+  }
+
+ 
 
  
   public clickPlus(){

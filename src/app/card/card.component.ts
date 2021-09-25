@@ -1,7 +1,7 @@
 import { Component, ViewChild, Input, ElementRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MyCard } from './my-card';
-import {CardFunctions} from './cardFunctions';
+import { CardFunctions } from './cardFunctions';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatCard } from '@angular/material/card';

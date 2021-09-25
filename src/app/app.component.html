@@ -117,19 +117,14 @@
 
 
 <div class="content" role="main">
-  <div fxLayout="row" fxFlex.md="70" fxLayoutWrap class="card-deck-container mat-elevation-z4" *ngif="unchanged">
+  
+ <div fxLayout="row" fxFlex.md="70" fxLayoutWrap class="card-deck-container mat-elevation-z4" *ngif="unchanged">
     <div fxFlex *ngFor="let card of cards" class="card-item">
       <card-component [ngStyle]="{'width':'300' + 'px'}" [cardT]="card"></card-component>
     </div>
 
-   <div class="paginator mat-elevation-z4" *ngIf="productsDisplayed.length !== 0">
-     <mat-paginator
-       [length]="cardCount"
-       [pageSize]="10"
-       [pageIndex]="pgIndex"
-     </mat-paginator>
-   </div>
-</div> 
+   
+</div>
   
   
   
