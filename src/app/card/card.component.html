@@ -1,5 +1,5 @@
-<div class="card-arr" *ngFor="let card of cards">
-<mat-card class="card-template">
+
+<mat-card class="card-template" *ngif="">
     <mat-card-header >
       <mat-card-title>{{ recipeTitle(cardT) }}</mat-card-title>
       </mat-card-header>
@@ -29,4 +29,3 @@
       </mat-grid-list>      
     </mat-card-actions>
   </mat-card>
-</div>
