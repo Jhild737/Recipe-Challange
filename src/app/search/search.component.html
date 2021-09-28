@@ -1,22 +1,11 @@
-<div class="search-bar"
-    [ngClass]="{ 'side-nav-bar-collapsed': !(showSearch | async) !== null}">
-    
-    <!-- overlay -->
-    <div class="side-nav-bar-overlay" 
-    [ngStyle]="{ 'transition': 'background-color ' + duration + 's, visibility ' + duration + 's' }"
-    [ngClass]="{ 'side-nav-bar-overlay-collapsed': !(showSearch | async) !== null }"
-        (click)="onSidebarClose()"></div>
-    
-    <!-- side bar-->
-    <div class="side-nav-bar-menu-container" 
-    [ngStyle]="getSideNavBarStyle((showSearch | async) !== null)">
+<mat-sidenav-container>
+    <mat-sidenav-content>
+      <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
         
-        <!-- close button -->
-        <div><span class="material-icons side-nav-bar-close" (click)="onSidebarClose()">clear</span></div>
-
-        <!-- side bar content -->
-        <div class="side-nav-bar-content-container">
-            <ng-container *ngTemplateOutlet="searchTemplateRef"></ng-container>
-        </div>
-    </div>
-</div>
+        
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Category" formControlName="category" (change)="onKeyPressEvent()">
+        </mat-form-field>
+    </form>
+</mat-sidenav-content>
+</mat-sidenav-container>

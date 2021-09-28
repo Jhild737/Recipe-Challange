@@ -11,6 +11,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import { CardComponent } from './card/card.component';
 import { SearchComponent } from './search/search.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list'; 
+
+
 
 
 @NgModule({
@@ -28,7 +32,9 @@ import { SearchComponent } from './search/search.component';
     MatButtonModule,
     FlexLayoutModule,
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

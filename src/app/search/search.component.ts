@@ -3,6 +3,8 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { NavigationService } from 'src/app/services/navigation.service';
 import { Observable } from 'rxjs';
 import { SearchDirection } from './search-direction';
+import { FormGroup, FormBuilder } from "@angular/forms";
+import { MatListModule } from '@angular/material/list'; 
 
 @Component({
   selector: 'app-search',
@@ -12,21 +14,46 @@ import { SearchDirection } from './search-direction';
 })
 export class SearchComponent implements OnInit {
   
-  
+  options: FormGroup;
+  searchText: string = "";
+  categories: string[] = ['Drinks', 'Breakfast', 'Lunch', 'Dinner', 'Brunch', 'Appetizers', 'Dessert'];
   @Input() searchTemplateRef: any;
   @Input() duration: number = 0.25;
   @Input() navWidth: number = window.innerWidth;
   @Input() direction: SearchDirection = SearchDirection.Left;
   
+
   showSearch: Observable<boolean> = new Observable<boolean>();
 
-  constructor(private navService: NavigationService) {
-    
-  }
 
-  ngOnInit(): void {
+
+  constructor(public fb: FormBuilder, private navService: NavigationService) {
+    this.options = this.fb.group({
+      category: [''],
+      picture: [''],
+      description: ['']
+  })}
+
+
+  /* Reactive form */
+  
+
+ ngOnInit(): void {
+    this.reactiveForm();
     this.showSearch = this.navService.getShowNav();
   }
+
+reactiveForm() {
+    this.options = this.fb.group({
+      category: [''],
+      picture: [''],
+      description: ['']
+  })
+}
+
+onKeypressEvent(event: ){
+  this.searchText = event.target.value$;
+}
 
   onSidebarClose() {
     this.navService.setShowNav(false);
