@@ -281,6 +281,11 @@
     <span> <mat-icon aria-hidden="false" aria-label="Example home icon" >search</mat-icon></span>
     <span> <mat-icon aria-hidden="false" aria-label="Example home icon" >last_page</mat-icon></span>
 </div>
+<app-search 
+  [searchTemplateRef]="navContent"
+  [direction]="'left'" 
+  [navWidth]="280" 
+  [duration]="0.5"></app-search>
 <div class="content">
   
 
@@ -301,3 +306,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet></router-outlet>
+
+<ng-template #navContent>
+  Side Nav Bar Content Here
+</ng-template>
