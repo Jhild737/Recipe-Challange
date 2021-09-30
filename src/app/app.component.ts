@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
@@ -7,8 +8,24 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
+
+  @ViewChild(NavBarComponent)
+  sideNav!: NavBarComponent
+  
+  
+  ngAfterViewInit(): void {
+    this.navVis = false;
+    this.sideNav = this.navBar;
+  }
+
+
+  navVis = false;
+  private navBar = new NavBarComponent();
   public clickAdd(){}
-  public clickSearch(){}
+  public toggleNav(){
+    alert('search');
+    this.sideNav.setVisible(true);
+  }
   title = 'recipe';
 }

@@ -13,7 +13,8 @@ import { CardComponent } from './card/card.component';
 import { SearchComponent } from './search/search.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list'; 
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
@@ -21,7 +22,8 @@ import { MatListModule } from '@angular/material/list';
   declarations: [
     AppComponent,
     CardComponent,
-    SearchComponent
+    SearchComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { MatListModule } from '@angular/material/list';
     CommonModule,
     MatCardModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
