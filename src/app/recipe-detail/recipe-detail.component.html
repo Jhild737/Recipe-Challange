@@ -1,0 +1,52 @@
+
+<style>
+
+.spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #6f19d2;
+    color: white;
+    font-weight: 600;
+    padding-left: 1%;
+    text-align: center;
+    
+  }
+
+  .mat-icons {
+    position: relative;
+    display: flex;
+    
+  }
+
+img{
+    max-width: 100%;
+  height: auto;
+}
+
+.details{
+    position: absolute;
+    height: 400px;
+    width: 700px;
+    margin-left: 1%;
+}
+</style>
+
+
+<toolbar-top></toolbar-top>
+<div class="details">
+<p>{{display.name}}</p>
+<img mat-card-image src="./../assets/recipe.jpg">
+<p>{{display.description}}</p>
+<p>{{display.category}}</p>
+</div>
+
+<router-outlet></router-outlet> 

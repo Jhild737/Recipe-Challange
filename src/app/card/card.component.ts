@@ -16,7 +16,7 @@ export class CardComponent{
 
 
   
- public cards: MyCard[] = [{ name: 'pep', description: 'cool', picURL: 'looking'}, { name: 'pepuyuy', description: 'cool', picURL: 'looking'}];
+ public cards: MyCard[] = [{ name: 'pep', description: 'cool', category: 'looking'}, { name: 'pepuyuy', description: 'cool', category: 'looking'}];
   public cardController: CardFunctions = new CardFunctions(this.cards);
 
   public index: number = CardFunctions.length - 1;

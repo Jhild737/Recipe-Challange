@@ -1,5 +1,6 @@
-import {Component, Inject} from '@angular/core'; from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material'; 
+import {Component, Inject} from '@angular/core';
+import { MyCard } from '../card/my-card';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog'; 
 
 export interface DialogData {
   title: string;
@@ -16,25 +17,28 @@ export interface DialogData {
 
 export class DialogRecipe {
 
-  title: string;
-  description: string;
-  category: string;
-
+  name: string = '';
+  description: string = '';
+  category: string = '';
+  recipe: MyCard = new MyCard('', '', '');             
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogRecipeDialog, {
       width: '250px',
-      data: {title: this.title, description: this.description, category: this.category}
+      data: {name: this.name, description: this.description, category: this.category}
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.recipe = result;
+      if (result && result.name && result.description && result.category)
+      this.recipe = new MyCard(result.title, result.description, result.category);
     });
   }
 
 }
+
+
 
 @Component({
   selector: 'dialog-recipe-dialog',

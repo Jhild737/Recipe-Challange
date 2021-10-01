@@ -15,7 +15,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-
+import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { ToolbarTopComponent } from './toolbar-top/toolbar-top.component';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     AppComponent,
     CardComponent,
     SearchComponent,
-    NavBarComponent
+    NavBarComponent,
+    RecipeDetailComponent,
+    ToolbarTopComponent
   ],
   imports: [
     BrowserModule,
