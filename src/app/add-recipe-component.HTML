@@ -1,10 +1,15 @@
-<div mat-dialog-content>
-  
+<div mat-dialog-content>  
   <mat-form-field>
-    <input matInput [(ngModel)]="data.recipe">
+    <input matInput [(ngModel)]="data.title">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="description">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.category">
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Add</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Add</button>
 </div>
